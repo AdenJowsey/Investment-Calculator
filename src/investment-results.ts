@@ -1,8 +1,11 @@
-// Use the below code as a help
-// e.g., integrate it into a service or component
-// You may need to tweak it, depending on where and how you use it
+import { InvestementResults } from './app/investment-results/investment-result.model';
 
-function calculateInvestmentResults() {
+function calculateInvestmentResults(
+  initialInvestment: number,
+  duration: number,
+  expectedReturn: number,
+  annualInvestment: number
+): InvestementResults[] {
   const annualData = [];
   let investmentValue = initialInvestment;
 
