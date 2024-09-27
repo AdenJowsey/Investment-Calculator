@@ -9,6 +9,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr></tr>
+    @for (result of investmentResults; track result.year) {
+    <tr>
+      <td>{{ result.year }}</td>
+      <td>{{ result.valueEndOfYear | currency }}</td>
+      <td>{{ result.interest | currency }}</td>
+      <td>{{ result.totalInterest | currency }}</td>
+      <td>{{ result.totalAmountInvested | currency }}</td>
+    </tr>
+    }
   </tbody>
 </table>
